@@ -10,7 +10,7 @@ const ProductSchema=mongoose.Schema({
     price:{type: Number}
 },
 {
-    timeStamps:true
+    timestamps:true
 });
 
 module.exports=mongoose.model('Product',ProductSchema)

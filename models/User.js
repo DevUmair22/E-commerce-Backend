@@ -1,4 +1,3 @@
-const { Timestamp } = require('mongodb');
 const mongoose=require('mongoose');
 const UserSchema=mongoose.Schema({
      
@@ -18,11 +17,10 @@ const UserSchema=mongoose.Schema({
         unique:true
     },
        isAdmin:{
-        type: String,
+        type: Boolean,
         default:false
        },
   
-},{Timestamp:true}
-);
+},{ timestamps : true });
 
 module.exports=mongoose.model('User',UserSchema)

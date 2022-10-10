@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
-const ProductSchema=mongoose.Schema({
+const OrderSchema=mongoose.Schema({
      
-    useriD:{type: String,required:true,unique:true},
+    userId:{type: String,required:true},
     products:[
         {
             productId:{
@@ -14,11 +14,11 @@ const ProductSchema=mongoose.Schema({
         },
             ],
                 amount:{type:Number,required:true},
-                address:{type:Object, required :true},
+                address:{type:String, required :true},
                 status:{type:String,default:"pending"},
 },
 {
-    timeStamps:true
+    timestamps:true
 });
 
-module.exports=mongoose.model('Product',ProductSchema)
+module.exports=mongoose.model('Order',OrderSchema)
