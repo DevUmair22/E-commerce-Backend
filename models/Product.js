@@ -5,9 +5,10 @@ const ProductSchema=mongoose.Schema({
     description:{ type: String, required:true},
     img:{type: String, required:true},
     categories:{type: Array},  
-    color:{ type: String},     
-    size:{type: String},
-    price:{type: Number}
+    color:{ type: Array},     
+    size:{type: Array},
+    price:{type: Number},
+    inStock:{type:Boolean, default:true},
 },
 {
     timestamps:true
